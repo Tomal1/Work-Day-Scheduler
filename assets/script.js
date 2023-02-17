@@ -13,9 +13,9 @@ const hourSeventeenText = $("#hour-17");
 const confirmationMsg = $("#confirmation-msg");
 const timeBlock = $(".time-block")
 
-const saveBtn = $(".saveBtn");
+const Btn = $(".saveBtn");
 
-saveBtn.on("click", (e) => {
+Btn.on("click", (e) => {
     e.preventDefault();
     confirmationMsg.html("Appointment Added with <code>localStorage</code> ✅");
     confirmationMsg.attr("style", "text-align: center; font-size: 12px");
@@ -38,3 +38,16 @@ saveBtn.on("click", (e) => {
     localStorage.setItem("hour16", hourSixteenVal);
     localStorage.setItem("hour17", hourSeventeenVal);
 });
+
+const append = () => {
+    hourNineText.text(localStorage.getItem("hour09"));
+    hourTenText.text(localStorage.getItem("hour10"));
+    hourElevenText.text(localStorage.getItem("hour11"));
+    hourTwelveText.text(localStorage.getItem("hour12"));
+    hourThirteenText.text(localStorage.getItem("hour13"));
+    hourFourteenText.text(localStorage.getItem("hour14"));
+    hourFifteenText.text(localStorage.getItem("hour15"));
+    hourSixteenText.text(localStorage.getItem("hour16"));
+    hourSeventeenText.text(localStorage.getItem("hour17"));
+};
+append()
