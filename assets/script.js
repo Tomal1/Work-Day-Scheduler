@@ -1,14 +1,40 @@
-var currentTimeDisplay = $("#currentDay");
+const currentTimeDisplay = $("#currentDay");
 currentTimeDisplay.text(moment().format('llll'));
 
-var hourNineText = $("#hour-9");
-var hourTenText = $("#hour-10");
-var hourElevenText = $("#hour-11");
-var hourTwelveText = $("#hour-12");
-var hourThirteenText = $("#hour-13");
-var hourFourteenText = $("#hour-14");
-var hourFifteenText = $("#hour-15");
-var hourSixteenText = $("#hour-16");
-var hourSeventeenText = $("#hour-17");
-var confirmationMsg = $("#confirmation-msg");
-var timeBlock = $(".time-block")
+const hourNineText = $("#hour-9");
+const hourTenText = $("#hour-10");
+const hourElevenText = $("#hour-11");
+const hourTwelveText = $("#hour-12");
+const hourThirteenText = $("#hour-13");
+const hourFourteenText = $("#hour-14");
+const hourFifteenText = $("#hour-15");
+const hourSixteenText = $("#hour-16");
+const hourSeventeenText = $("#hour-17");
+const confirmationMsg = $("#confirmation-msg");
+const timeBlock = $(".time-block")
+
+const saveBtn = $(".saveBtn");
+
+saveBtn.on("click", (e) => {
+    e.preventDefault();
+    confirmationMsg.html("Appointment Added with <code>localStorage</code> ✅");
+    confirmationMsg.attr("style", "text-align: center; font-size: 12px");
+    hourNineVal = hourNineText.val();
+    hourTenVal = hourTenText.val();
+    hourElevenVal = hourElevenText.val();
+    hourTwelveVal =  hourTwelveText.val();
+    hourThirteenVal = hourThirteenText.val(); 
+    hourFourteenVal = hourFourteenText.val(); 
+    hourFifteenVal = hourFifteenText.val();
+    hourSixteenVal = hourSixteenText.val();
+    hourSeventeenVal = hourSeventeenText.val();
+    localStorage.setItem("hour09", hourNineVal);
+    localStorage.setItem("hour10", hourTenVal);
+    localStorage.setItem("hour11", hourElevenVal);
+    localStorage.setItem("hour12", hourTwelveVal);
+    localStorage.setItem("hour13", hourThirteenVal);
+    localStorage.setItem("hour14", hourFourteenVal);
+    localStorage.setItem("hour15", hourFifteenVal);
+    localStorage.setItem("hour16", hourSixteenVal);
+    localStorage.setItem("hour17", hourSeventeenVal);
+});
