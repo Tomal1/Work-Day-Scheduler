@@ -6,7 +6,7 @@ This is a calendar application that allows a user to save events for each hour o
 It tracks the current time and color codes the calender depending on the weather.
 There is a button next to each input which allows the user to append notes
 
-deployed website URL: 
+deployed website URL: https://tomal1.github.io/Work-Day-Scheduler/
 
 gitHub repo URL: https://github.com/Tomal1/Work-Day-Scheduler
 
