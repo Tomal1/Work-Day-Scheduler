@@ -51,3 +51,21 @@ const append = () => {
     hourSeventeenText.text(localStorage.getItem("hour17"));
 };
 append()
+
+for (let i = 0; i < timeBlock.length; i++) {
+    if (timeBlock[i].dataset.time === moment().hours()) {
+        timeBlock[i].classList.remove("past");
+        timeBlock[i].classList.remove("future");
+        timeBlock[i].classList.add("present");
+    };
+    if (timeBlock[i].dataset.time > moment().hours()) {
+        timeBlock[i].classList.remove("past");
+        timeBlock[i].classList.remove("present");
+        timeBlock[i].classList.add("future");
+    };
+    if (timeBlock[i].dataset.time < moment().hours()) {
+        timeBlock[i].classList.remove("present");
+        timeBlock[i].classList.remove("future");
+        timeBlock[i].classList.add("past");
+    }
+};
