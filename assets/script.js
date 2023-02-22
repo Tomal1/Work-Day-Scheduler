@@ -53,7 +53,7 @@ const append = () => {
 append()
 
 for (let i = 0; i < timeBlock.length; i++) {
-    if (timeBlock[i].dataset.time === moment().hours()) {
+    if (timeBlock[i].dataset.time == moment().hours()) {
         timeBlock[i].classList.remove("past");
         timeBlock[i].classList.remove("future");
         timeBlock[i].classList.add("present");
